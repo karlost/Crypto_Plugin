@@ -67,7 +67,11 @@ echo "
 <select id=\"fiat\" name=\"fiat\">
   <option value=\"usd\">Dollar</option>
   <option value=\"eur\">Euro</option>
-
+  <option value=\"JPY\">Jen</option>
+  <option value=\"GBP\">Libra</option>
+  <option value=\"RUB\">Rubl</option>
+  <option value=\"AUD\">aDollar</option>
+  
 </select>
  
   <input type=\"submit\">
@@ -93,7 +97,7 @@ echo "<br><h3>Pro zobrazeni cen je nutné použit Shortcode [current_prices]</h3
 				VALUES ('$crypto', '$fiat')";
 				
 				if ($conn->query($sql) === TRUE) {
-				  echo "New record created successfully";
+				  echo "Pár přidán";
 				} else {
 				  echo "Error: " . $sql . "<br>" . $conn->error;
 				}
@@ -146,7 +150,7 @@ $id = $_GET['id'];
  if ($conn->query($sql) === TRUE) {
    echo "Record deleted successfully";
  } else {
-   echo "Error deleting record: " . $conn->error;
+   echo "Pár smazán: " . $conn->error;
  }
  
  $conn->close();
