@@ -120,7 +120,7 @@ echo "<br><h3>Pro zobrazeni cen je nutné použit Shortcode [current_prices]</h3
     $crypto = $row["crypto"];
     $fiat = $row["fiat"];
     $id = $row["id"];
-  echo "$crypto-$fiat <a href='http://demos.8u.cz/wp-admin/admin.php?page=example-options&id=$id'>DELETE</a> <br>";
+  echo "$crypto-$fiat <a href='admin.php?page=example-options&id=$id'>DELETE</a> <br>";
     
     
 }
